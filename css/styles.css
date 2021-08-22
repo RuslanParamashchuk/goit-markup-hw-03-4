@@ -26,8 +26,8 @@ ul {
 }
 .header-link {
   display: block;
-  padding-bottom: 38px;
-  padding-top: 38px;
+  padding-bottom: 32px;
+  padding-top: 32px;
   text-decoration: none;
 }
 .header-link:hover {
@@ -82,16 +82,32 @@ img {
   display: block;
   max-width: 100%;
 }
+.current {
+  display: block;
+  padding-bottom: 32px;
+  padding-top: 32px;
+  text-decoration: none;
+  color: var(--accent-color);
+}
+.section {
+  padding: 94px 0px;
+}
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
 /* -------header--------- */
 .header {
+  border-bottom: 1px solid #ececec;
 }
 .header .container {
   display: flex;
   align-items: center;
-  border-bottom: 1px solid #ececec;
 }
 .header-nav {
-  display: block;
   display: flex;
   align-items: center;
 }
@@ -112,7 +128,8 @@ img {
 }
 .header-list {
   display: flex;
-
+}
+.header-list-item {
   color: #212121;
   font-weight: 500;
   font-size: 14px;
@@ -123,14 +140,17 @@ img {
 .header-list-item:not(:last-child) {
   margin-right: 50px;
 }
+.header-adress-item:not(:first-child) {
+  margin-left: 50px;
+}
 
 .header-list-link {
   color: var(--title-text-color);
 }
 .header-list-link .link {
   display: block;
-  padding-top: 38px;
-  padding-bottom: 38px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .header-adress-list {
@@ -144,12 +164,10 @@ img {
 }
 .header-adress-item {
   color: var(--primary-text-color);
-  margin-left: 25px;
 }
 /*-------footer------------- */
 .footer {
-  margin-top: 94px;
-  background-color: var(--title-text-color);
+  background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -158,13 +176,15 @@ img {
 }
 .logo-footer {
   margin-top: 60px;
+  margin-right: 0;
 }
-.footer-adress-list {
+.footer-adress {
   margin-top: 20px;
 }
-.footer-adress-item {
+.footer-adress-item:not(:first-child) {
   margin-top: 9px;
-
+}
+.footer-adress-item {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
@@ -179,8 +199,7 @@ img {
 /*-------Main section------ */
 
 .hero {
-  background-color: var(--title-text-color);
-  flex-grow: 1;
+  background-color: #2f303a;
   text-align: center;
   padding-top: 200px;
   padding-bottom: 200px;
@@ -195,6 +214,7 @@ img {
   color: #ffffff;
 }
 .hero-btn {
+  padding: 10px 32px;
   margin-top: 30px;
   cursor: pointer;
   border: transparent;
@@ -204,9 +224,7 @@ img {
   background: var(--accent-color);
 }
 /* ---------Special section--------- */
-.special {
-  margin-top: 94px;
-}
+
 .special-list {
   display: flex;
   justify-content: space-between;
@@ -214,9 +232,8 @@ img {
 .special-item {
   width: 270px;
 }
-
-. .special-item-title {
-  font-weight: 700;
+.special-item-title {
+  font-weight: 900;
   font-size: 14px;
   line-height: 1.14;
   color: var(--title-text-color);
@@ -229,9 +246,10 @@ img {
   line-height: 1.71;
 }
 /* --------- What we doing section---------*/
+.our-job {
+  padding-top: 0;
+}
 .our-job-title {
-  margin-top: 94px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -244,9 +262,10 @@ img {
   margin-top: 50px;
 }
 /* ---------Our team section--------- */
+.team {
+  background-color: #f5f4fa;
+}
 .team-title {
-  margin-top: 188px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -254,6 +273,8 @@ img {
   color: var(--title-text-color);
 }
 .team-item {
+  border-radius: 4px;
+  box-shadow: 0px 1px 0px 1px rgba(0, 0, 0, 0.14);
   width: 270px;
   padding-bottom: 30px;
 }
@@ -264,8 +285,6 @@ img {
   margin-top: 50px;
 }
 .team-item-name {
-  margin-top: 30px;
-
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -278,13 +297,17 @@ img {
   line-height: 1.19;
   text-align: center;
 }
+.personal {
+  padding: 30px;
+}
 /* ----------Portfolio section------------- */
 .portfolio-catalogue-list {
-  margin-top: 50px;
+  padding-top: 50px;
   display: flex;
   flex-wrap: wrap;
   flex-basis: calc(100% / 3 - var(--catalogu-gap));
   margin-left: calc(-1 * var(--catalogu-gap));
+  margin-top: calc(-1 * var(--catalogu-gap));
 }
 .portfolio-catalogue-list-title {
   font-weight: 700;
@@ -310,10 +333,9 @@ img {
   padding: 20px 24px;
 }
 .portfolio-button-list {
-  margin-top: 94px;
   display: flex;
   justify-content: center;
 }
-.portfolio-button-list-item {
+.portfolio-button-list-item:not(:first-child) {
   margin-left: 8px;
 }
